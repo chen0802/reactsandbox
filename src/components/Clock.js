@@ -37,7 +37,7 @@ const Clock_Old = function() {
     );
 }    
 */
-class Greeting extends Component {
+class GreetingAMPM extends Component {
     //pass property to child components
     render() {
         return <a>{ parseInt(this.props.Hours, 10) < 12 ? "Good Morning": "Good Afternoon"}</a>
@@ -98,4 +98,4 @@ class Clock extends Component {
     }
 } 
 
-export {Clock, Welcome, Toggle} 
+export {Clock, Welcome, Toggle, GreetingAMPM} 

@@ -107,7 +107,7 @@ class TemperatureInput extends Component {
         this.props.onTemperatureChange(e.target.value);
     }
     render() {
-        const temperature = this.props.temperature;
+        //const temperature = this.props.temperature;
         const scale = this.props.scale;
 
         return (

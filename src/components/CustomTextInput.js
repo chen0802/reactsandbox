@@ -31,7 +31,7 @@ class CustomTextInput extends Component {
 */
 
 //ref callback
-class CustomTextInput extends React.Component {
+class CustomTextInput extends Component {
     constructor(props) {
       super(props);
   
