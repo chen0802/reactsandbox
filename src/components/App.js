@@ -12,7 +12,6 @@ import { SplitApp } from './SplitPanel';
 import { Greeting, MyComponnt } from './PropTypesCheck';
 import { CustomTextInput } from './CustomTextInput';
 import { AutoFocusTextInput } from './AutoFocusTextInput';
-import { ThemeDemo } from './ThemeContext';
 
 class App extends React.Component {
     hideStyle = {
@@ -37,14 +36,13 @@ class App extends React.Component {
     render() {
     
         return (
-            <div>
+            <React.Fragment>
                 <WarningBanner warn={this.state.warning} />                 
                 <h2 className='text-left'> Bitcoin Price &#36; &pound; &euro;  <Clock increment="1"/> </h2>
                 <BitcoinPrice />
 
-                
                 <Welcome name = "Add Bitcoin into your portifilo"  />
-            </div>
+            </React.Fragment>
         )
     }
 

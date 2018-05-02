@@ -56,7 +56,7 @@ class CustomTextInput extends Component {
       // Use the `ref` callback to store a reference to the text input DOM
       // element in an instance field (for example, this.textInput).
       return (
-        <div>
+        <React.Fragment>
           <input
             type="text"
             ref={this.setTextInputRef}
@@ -66,7 +66,7 @@ class CustomTextInput extends Component {
             value="Focus the text input"
             onClick={this.focusTextInput}
           />
-        </div>
+        </React.Fragment>
       );
     }
   }
