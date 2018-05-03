@@ -48,6 +48,7 @@ class BitcoinPrice extends Component {
             <thead className="thead-dark">
               <tr>
                 <th scope="col">#</th>
+                <th scope="col">Symbol</th>
                 <th scope="col">Currency</th>
                 <th scope="col">Description</th>
                 <th scope="col">Rate</th>
@@ -81,9 +82,11 @@ class Bitcoin extends Component {
     const data = this.props.data;
     return Object.entries(data).map((key, index) => {
       const item = data[key[0]];
+      //workaround #12712 to use dangerouslySetInnerHTML
       return (
         <tr key={index}>
-          <th scope="row">{index+1}</th>
+          <th scope="row">{index + 1}</th>
+          <td dangerouslySetInnerHTML={{__html: item.symbol}}></td>
           <td>{item.code}</td>
           <td>{item.description}</td>
           <td>{item.rate}</td>
