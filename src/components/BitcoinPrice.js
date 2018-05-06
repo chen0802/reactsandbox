@@ -1,11 +1,21 @@
 import React, {Component} from 'react'
+import axios from 'axios'
 import {listItems, NumberList} from './ListNumber'
 
 class BitcoinPrice extends Component {
 
+  componentDidMount() {
+    let bitcoinApiUrl = 'https://api.coindesk.com/v1/bpi/currentprice.json';
+    axios.get(bitcoinApiUrl).then(res=> {
+      const bitcoin = res.data;
+      this.setState({bitcoin});
+    });
+  }
   //Restful API to get Bitcoin price https://api.coindesk.com/v1/bpi/currentprice.json
     constructor(props) {
         super(props);
+        this.state = {bitcoin: []}
+        /*
         this.state = {
           "time": {
             "updated": "Apr 28, 2018 02:46:00 UTC",
@@ -37,7 +47,7 @@ class BitcoinPrice extends Component {
               "rate_float": 7508.8096
             }
           }
-        };
+        };*/
     }
     render() {
         const showList = false;
@@ -58,7 +68,7 @@ class BitcoinPrice extends Component {
               </tr>
             </thead>
             <tbody>
-              <Bitcoin data={this.state.bpi} />
+              <Bitcoin data={this.state.bitcoin.bpi} />
             </tbody>
         </table>
             {showList ? (
@@ -80,6 +90,8 @@ class Bitcoin extends Component {
 
   render() {
     const data = this.props.data;
+    if (!data) return null;
+
     return Object.entries(data).map((key, index) => {
       const item = data[key[0]];
       //workaround #12712 to use dangerouslySetInnerHTML
