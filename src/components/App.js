@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {Component} from 'react'
 import { Clock, Welcome, Toggle } from './Clock'
 import { BitcoinPrice } from './BitcoinPrice'
 import LoginControl from './LoginControl'
@@ -12,6 +12,12 @@ import { SplitApp } from './SplitPanel';
 import { Greeting, MyComponnt } from './PropTypesCheck';
 import { CustomTextInput } from './CustomTextInput';
 import { AutoFocusTextInput } from './AutoFocusTextInput';
+
+import {BrowserRouter as Router, Route, Link} from 'react-router-dom';
+import FontAwesomeIcon from '@fortawesome/react-fontawesome';
+import faCoffee from '@fortawesome/fontawesome-free-solid/faCoffee';
+import faHome from '@fortawesome/fontawesome-free-solid/faHome';
+
 
 class App extends React.Component {
     hideStyle = {
@@ -34,6 +40,35 @@ class App extends React.Component {
     }
 
     render() {
+        return (
+            <Router>
+                <div>
+                    <ul>
+                        <li>
+                            <Link to="/"><FontAwesomeIcon icon={faHome}/></Link>
+                        </li>
+
+                        <li>
+                            <Link to="/bitcoin"> Bitcoin </Link>
+                        </li>
+                        
+                        <li>
+                            <Link to="/ethereum"> Ethereum </Link>
+                        </li>
+                    </ul>
+
+                    <Route exact path="/" component={Home} />
+                    <Route exact path="/bitcoin" component={Bitcoin} />
+                    <Route exact path="/ethereum" component={Ethereum} />
+                </div>
+            </Router>
+        )
+    };
+   
+
+
+
+    renderBitcoinPrice() {
     
         return (
             <React.Fragment>
@@ -79,5 +114,25 @@ class App extends React.Component {
         ) 
     }
 }
+/*
+Ethereum = () => (
+    <div>
+        <h2> Home </h2>
+    </div>
+)
+*/
+const Home = () => (
+    <div>
+        <h2> Home </h2>
+    </div>
+);
 
+const Bitcoin = () => (
+    <BitcoinPrice />    
+)
+class Ethereum extends Component {
+    render() {
+        return <div> Ethereum </div>
+    }
+}
 export default App
