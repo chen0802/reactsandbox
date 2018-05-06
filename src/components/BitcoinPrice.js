@@ -63,68 +63,63 @@ class BitcoinPrice extends Component {
     };*/
   }
   render() {
-      const showList = false;
+    const showList = false;
 
-      return ( 
-        <div>
-        <table className="table table-hover table-responsive">
-          <thead className="thead-dark">
-            <tr>
-              <th scope="col">#</th>
-              <th scope="col">Symbol</th>
-              <th scope="col">Currency</th>
-              <th scope="col">Description</th>
-              <th scope="col">Rate</th>
-              {showRate  &&
-              <th scope="col">Rate Float</th>
-            }
-            </tr>
-          </thead>
-          <tbody>
-            <Bitcoin data={this.state.bitcoin.bpi} />
-          </tbody>
-      </table>
-          {showList ? (
-          <div>
-            <ul>100 Units Price:{listItems}</ul>
-            <NumberList numbers={numbers} />
-          </div>
-          ): (<div></div>) }
-      </div>    
-          )
-        }
-      }
-
-
-      const numbers = [1, 2, 3, 4, 5];
-      const showRate = false;
-
-      class Bitcoin extends Component {
-
-        render() {
-          const data = this.props.data;
-          if (!data) return null;
-
-          return Object.entries(data).map((key, index) => {
-            const item = data[key[0]];
-            //workaround #12712 to use dangerouslySetInnerHTML
-            return (
-              <tr key={index}>
-                <th scope="row">{index + 1}</th>
-                <td dangerouslySetInnerHTML={{__html: item.symbol}}></td>
-                <td>{item.code}</td>
-                <td>{item.description}</td>
-                <td>{item.rate}</td>
-                {showRate &&
-                  <td>{item.rate_float}</td>
-                }
-              </tr>
-            )
+    return ( 
+      <div>
+      <table className="table table-hover table-responsive">
+        <thead className="thead-dark">
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">Symbol</th>
+            <th scope="col">Currency</th>
+            <th scope="col">Description</th>
+            <th scope="col">Rate</th>
+            {showRate  &&
+            <th scope="col">Rate Float</th>
           }
+          </tr>
+        </thead>
+        <tbody>
+          <Bitcoin data={this.state.bitcoin.bpi} />
+        </tbody>
+    </table>
+        {showList ? (
+        <div>
+          <ul>100 Units Price:{listItems}</ul>
+          <NumberList numbers={numbers} />
+        </div>
+        ): (<div></div>) }
+    </div>    
+    )
+  }
+}
 
-        )
-      }
-    }
-    
-    
-    export { BitcoinPrice }
+const numbers = [1, 2, 3, 4, 5];
+const showRate = false;
+
+class Bitcoin extends Component {
+  render() {
+    const data = this.props.data;
+    if (!data) return null;
+
+    return Object.entries(data).map((key, index) => {
+      const item = data[key[0]];
+      //workaround #12712 to use dangerouslySetInnerHTML
+      return (
+        <tr key={index}>
+          <th scope="row">{index + 1}</th>
+          <td dangerouslySetInnerHTML={{__html: item.symbol}}></td>
+          <td>{item.code}</td>
+          <td>{item.description}</td>
+          <td>{item.rate}</td>
+          {showRate &&
+            <td>{item.rate_float}</td>
+          }
+        </tr>
+      )
+    })
+  }
+}
+   
+export { BitcoinPrice }
