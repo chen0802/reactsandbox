@@ -99,7 +99,65 @@ const numbers = [1, 2, 3, 4, 5];
 const showRate = false;
 
 class Bitcoin extends Component {
+  constructor(props) {
+    console.log('Constructor Start');
+    super(props);
+    this.state = {
+      price: ''
+    };
+    console.log('Constructor End');
+  }
+  getSnapshotBeforeUpdate() {
+    console.log('getSnapshotBeforeUpdate');
+    return null;
+  }
+  static getDerivedStateFromProps() {
+    console.log('getDerivedStateFromProps');
+    return null;
+  }
+  componentWillReceiveProps(nextProps) {
+    console.log('componentWillReceiveProps - Legancy function to update state based on new props value. Version 16 recommend to use getDerivedStateFromProps');
+  }
+
+
+  /* Legancy event handlers begin */
+  /* 17.0: Remove componentWillMount, componentWillReceiveProps, and componentWillUpdate . 
+    (Only the new “UNSAFE_” lifecycle names will work from this point forward.) */
+  componentWillUpdate(nextProps, nextState) {
+    console.log('componentWillUpdate - DONOT use async mode since might be called multiple times, no guarantee');
+    /* Example
+    if (
+      this.state.someStatefulValue !==
+      nextState.someStatefulValue
+    ) {
+      nextProps.onChange(nextState.someStatefulValue);
+    }    
+    */
+  } 
+  componentWillMount() {
+    console.log('componentWillMount - Initialize state or fetch external data');
+  }
+  componentWillUnmount() {
+    console.log('componentWillunmount - Cancel fetch request');
+  }
+  /* Legancy event handlers end */
+
+  componentDidMount() {
+    console.log('componentDidMount');
+  }
+
+
+  componentDidUpdate() {
+    console.log('componentDidUpdate - call async here to update or get new data');
+    /**
+     * Like componentWillUpdate, componentWillReceiveProps might get called multiple times for a single update. 
+     * For this reason it is important to avoid putting side effects in this method. Instead, componentDidUpdate 
+     * should be used since it is guaranteed to be invoked only once per update:
+     */
+
+  }
   render() {
+    console.log('render');
     const data = this.props.data;
     if (!data) return null;
 

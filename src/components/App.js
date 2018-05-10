@@ -15,7 +15,6 @@ import { AutoFocusTextInput } from './AutoFocusTextInput';
 
 import {BrowserRouter as Router, Route, Link} from 'react-router-dom';
 import FontAwesomeIcon from '@fortawesome/react-fontawesome';
-import faCoffee from '@fortawesome/fontawesome-free-solid/faCoffee';
 import faHome from '@fortawesome/fontawesome-free-solid/faHome';
 
 
@@ -39,7 +38,7 @@ class App extends React.Component {
         }
     }
 
-    render() {
+    renderFont() {
         return (
             <Router>
                 <div>
@@ -68,12 +67,112 @@ class App extends React.Component {
 
 
 
-    renderBitcoinPrice() {
+    render() {
     
         return (
             <React.Fragment>
                 <WarningBanner warn={this.state.warning} />                 
                 <h2 className='text-left'> Bitcoin Price &#36; &pound; &euro;  <Clock increment="1"/> </h2>
+                <BitcoinPrice />
+                <BitcoinPrice />
+                <BitcoinPrice />
+                <BitcoinPrice />
+                <BitcoinPrice />
+                <BitcoinPrice />
+                <BitcoinPrice />
+                <BitcoinPrice />
+                <BitcoinPrice />
+                <BitcoinPrice />
+                <BitcoinPrice />
+                <BitcoinPrice />
+                <BitcoinPrice />
+                <BitcoinPrice />
+                <BitcoinPrice />
+                <BitcoinPrice />
+                <BitcoinPrice />
+                <BitcoinPrice />
+                <BitcoinPrice />
+                <BitcoinPrice />
+                <BitcoinPrice />
+                <BitcoinPrice />
+                <BitcoinPrice />
+                <BitcoinPrice />
+                <BitcoinPrice />
+                <BitcoinPrice />
+                <BitcoinPrice />
+                <BitcoinPrice />
+                <BitcoinPrice />
+                <BitcoinPrice />
+                <BitcoinPrice />
+                <BitcoinPrice />
+                <BitcoinPrice />
+                <BitcoinPrice />
+                <BitcoinPrice />
+                <BitcoinPrice />
+                <BitcoinPrice />
+                <BitcoinPrice />
+                <BitcoinPrice />
+                <BitcoinPrice />
+                <BitcoinPrice />
+                <BitcoinPrice />
+                <BitcoinPrice />
+                <BitcoinPrice />
+                <BitcoinPrice />
+                <BitcoinPrice />
+                <BitcoinPrice />
+                <BitcoinPrice />
+                <BitcoinPrice />
+                <BitcoinPrice />
+                <BitcoinPrice />
+                <BitcoinPrice />
+                <BitcoinPrice />
+                <BitcoinPrice />
+                <BitcoinPrice />
+                <BitcoinPrice />
+                <BitcoinPrice />
+                <BitcoinPrice />
+                <BitcoinPrice />
+                <BitcoinPrice />
+                <BitcoinPrice />
+                <BitcoinPrice />
+                <BitcoinPrice />
+                <BitcoinPrice />
+                <BitcoinPrice />
+                <BitcoinPrice />
+                <BitcoinPrice />
+                <BitcoinPrice />
+                <BitcoinPrice />
+                <BitcoinPrice />
+                <BitcoinPrice />
+                <BitcoinPrice />
+                <BitcoinPrice />
+                <BitcoinPrice />
+                <BitcoinPrice />
+                <BitcoinPrice />
+                <BitcoinPrice />
+                <BitcoinPrice />
+                <BitcoinPrice />
+                <BitcoinPrice />
+                <BitcoinPrice />
+                <BitcoinPrice />
+                <BitcoinPrice />
+                <BitcoinPrice />
+                <BitcoinPrice />
+                <BitcoinPrice />
+                <BitcoinPrice />
+                <BitcoinPrice />
+                <BitcoinPrice />
+                <BitcoinPrice />
+                <BitcoinPrice />
+                <BitcoinPrice />
+                <BitcoinPrice />
+                <BitcoinPrice />
+                <BitcoinPrice />
+                <BitcoinPrice />
+                <BitcoinPrice />
+                <BitcoinPrice />
+                <BitcoinPrice />
+                <BitcoinPrice />
                 <BitcoinPrice />
 
                 <Welcome name = "Add Bitcoin into your portifilo"  />
