@@ -14,15 +14,19 @@ class BitcoinPrice extends Component {
     });
   }
   componentDidMount() {
+    console.log("componentDidMount");
     this.getBitcoinPrice();
     let timeoutInterval = 300000; //5 mins
     this.timerID = setInterval(() => this.getBitcoinPrice(), timeoutInterval);
   }
   componentWillMount() {
+    console.log("componentWillMount");
     clearInterval(this.timerID);
   }
 
   //Restful API to get Bitcoin price https://api.coindesk.com/v1/bpi/currentprice.json
+  //Other APIs
+  //https://www.cryptocompare.com/api#
   constructor(props) {
     super(props);
     this.state = {

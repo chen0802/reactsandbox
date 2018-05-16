@@ -12,8 +12,33 @@ function CTime(props) {
 */
 
 //arrow function format
-const Welcome = (props) => {
-    return <h3 className="text-center"> {props.name} </h3>;
+class Welcome extends Component {
+    constructor(props) {
+      console.log("constructor");
+      super(props);
+      this.state = {isToggleOn: true};
+    }
+    componentDidMount() {
+        console.log("componentDidMount");
+    }
+    componentWillMount() {
+        console.log("componentWillMount");
+    }
+    static getDerivedStateFromProps() {
+        console.log('getDerivedStateFromProps');
+        return null;
+    }
+    componentWillReceiveProps(nextProps) {
+        console.log('componentWillReceiveProps - Legancy function to update state based on new props value. Version 16 recommend to use getDerivedStateFromProps');
+    }
+    render() {
+        console.log("render");
+        return <h3>Hello</h3>;
+    }
+    getSnapshotBeforeUpdate() {
+        console.log('getSnapshotBeforeUpdate');
+        return null;
+    }
 }
 
 /* regular function format
