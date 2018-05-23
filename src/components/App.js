@@ -357,7 +357,7 @@ class App extends React.Component {
         ]
 
         const commonConditionButtons = CommonConditions.map(cond => {
-            return <ColorButton> {cond.display1} </ColorButton>
+            return <ColorButton key={cond.index} value={cond.value}> {cond.display1} </ColorButton>
         });
 
         return (
