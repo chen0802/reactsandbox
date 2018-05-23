@@ -159,199 +159,199 @@ class App extends React.Component {
             {
                 index: 20,
                 display: "Mian Tan, Facial Paralysis, Bell's Palsy",
-                display1: '',
+                display1: '面瘫',
                 value: "Mian Tan, Facial Paralysis, Bell's Palsy"
             },
             {
                 index: 21,
                 display: 'Headache',
-                display1: '',
+                display1: '头痛',
                 value: 'Headache'
             },
             {
                 index: 22,
                 display: 'Wind Stroke',
-                display1: '',
+                display1: '中风',
                 value: 'Wind Stroke'
             },
             {
                 index: 23,
                 display: 'Atrophy Syndrome',
-                display1: '',
+                display1: '萎缩综合症',
                 value: 'Atrophy Syndrome'
             },
             {
                 index: 24,
                 display: 'Sprains',
-                display1: '',
+                display1: '扭伤',
                 value: 'Sprains'
             },
             {
                 index: 25,
                 display: 'Sudden Deafness',
-                display1: '',
+                display1: '突发性耳聋',
                 value: 'Sudden Deafness'
             },
             {
                 index: 26,
                 display: 'Er Ming, Ringing in the Ear/Tinnitus',
-                display1: '',
+                display1: '耳鸣',
                 value: 'Er Ming, Ringing in the Ear/Tinnitus'
             },
             {
                 index: 27,
                 display: 'Ear Pain',
-                display1: '',
+                display1: '耳痛',
                 value: 'Ear Pain'
             },
             {
                 index: 28,
                 display: 'Myopia',
-                display1: '',
+                display1: '近视',
                 value: 'Myopia'
             },
             {
                 index: 29,
                 display: 'Bi Yan, Sinus Infection',
-                display1: '',
+                display1: '鼻炎',
                 value: 'Bi Yan, Sinus Infection'
             },
             {
                 index: 30,
                 display: 'Throat Pain',
-                display1: '',
+                display1: '喉咙痛',
                 value: 'Throat Pain'
             },
             {
                 index: 31,
                 display: 'Eczema',
-                display1: '',
+                display1: '湿疹',
                 value: 'Eczema'
             },
             {
                 index: 32,
                 display: 'Acne',
-                display1: '',
+                display1: '痤疮',
                 value: 'Acne'
             },
             {
                 index: 33,
                 display: 'Shingles',
-                display1: '',
+                display1: '带状疱疹',
                 value: 'Shingles'
             },
             {
                 index: 34,
                 display: 'Impotence',
-                display1: '',
+                display1: '阳痿',
                 value: 'Impotence'
             },
             {
                 index: 35,
                 display: 'Infertility',
-                display1: '',
+                display1: '不孕不育',
                 value: 'Infertility'
             },
             {
                 index: 36,
                 display: 'Premenstruel Syndromes',
-                display1: '',
+                display1: '经前期综合征',
                 value: 'Premenstruel Syndromes'
             },
             {
                 index: 37,
                 display: 'Dysmenorrhoea',
-                display1: '',
+                display1: '痛经',
                 value: 'Dysmenorrhoea'
             },
             {
                 index: 38,
                 display: 'Vaginal Itchiness',
-                display1: '',
+                display1: '阴道痒',
                 value: 'Vaginal Itchiness'
             },
             {
                 index: 39,
                 display: 'Irregular Menstruation',
-                display1: '',
+                display1: '月经不调',
                 value: 'Irregular Menstruation'
             },
             {
                 index: 40,
                 display: 'Morning Sickness',
-                display1: '',
+                display1: '孕吐',
                 value: 'Morning Sickness'
             },
             {
                 index: 41,
                 display: 'Menopause',
-                display1: '',
+                display1: '更年期',
                 value: 'Menopause'
             },
             {
                 index: 42,
                 display: 'Amenorrhea',
-                display1: '',
+                display1: '闭经',
                 value: 'Amenorrhea'
             },
             {
                 index: 43,
                 display: 'Abnormal Uterus Bleeding',
-                display1: '',
+                display1: '异常子宫出血',
                 value: 'Abnormal Uterus Bleeding'
             },
             {
                 index: 44,
                 display: 'Depression',
-                display1: '',
+                display1: '抑郁症',
                 value: 'Depression'
             },
             {
                 index: 45,
                 display: 'Insomnia',
-                display1: '',
+                display1: '失眠',
                 value: 'Insomnia'
             },
             {
                 index: 46,
                 display: 'Hypochondrial Pain',
-                display1: '',
+                display1: '胁痛',
                 value: 'Hypochondrial Pain'
             },
             {
                 index: 47,
                 display: 'Vomiting',
-                display1: '',
+                display1: '呕吐',
                 value: 'Vomiting'
             },
             {
                 index: 48,
                 display: 'Palpitation',
-                display1: '',
+                display1: '心慌',
                 value: 'Palpitation'
             },
             {
                 index: 49,
                 display: 'Edema',
-                display1: '',
+                display1: '水肿',
                 value: 'Edema'
             },
             {
                 index: 50,
                 display: 'Urinary Retention',
-                display1: '',
+                display1: '尿潴留',
                 value: 'Urinary Retention'
             },
             {
                 index: 51,
                 display: 'Syncope',
-                display1: '',
+                display1: '晕厥',
                 value: 'Syncope'
             },
             {
                 index: 52,
                 display: 'Toothache',
-                display1: '',
+                display1: '牙痛',
                 value: 'Toothache'
             }
         ]

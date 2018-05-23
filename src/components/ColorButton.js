@@ -21,7 +21,7 @@ class ColorButton extends Component {
     render() {
       const children = this.props.children;
       return (
-        <div class="btn-group mr-2 mb-2" role="group" aria-label={children}>
+        <div class="btn-group ml-1 mr-1 mb-2" role="group" aria-label={children}>
             <button type="button" data-toggle="button" aria-pressed="false" class="btn btn-secondary" onClick={this.handleClick}>
                 {children}
             </button>
