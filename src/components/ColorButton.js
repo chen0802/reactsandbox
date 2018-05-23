@@ -1,5 +1,8 @@
 import React, {Component} from 'react'
-
+/*
+color button templates
+http://fxexperience.com/2011/12/styling-fx-buttons-with-css/
+*/
 class ColorButton extends Component {
     constructor(props) {
       super(props);
