@@ -45,9 +45,12 @@ class App extends React.Component {
     }
 
     handleButtonClick(e) {
-        const selectedConditions = [
-            ...this.state.selectedConditions,
-            e.target.value];
+        let selectedConditions;
+        if (this.state.selectedConditions.indexOf(e.target.value) > -1) {
+            selectedConditions = [...this.state.selectedConditions]
+        } else {
+            selectedConditions = [...this.state.selectedConditions, e.target.value];
+        }
 
         this.setState({
                 selectedConditions
