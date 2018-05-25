@@ -26,8 +26,13 @@ class App extends React.Component {
 
     constructor(props) {
         super(props);
-        this.state = {warning: ''};
+        this.state = {
+                warning: '',
+                language: 'zh-CN',
+                selectedConditions: []
+            };
         this.handleToggerClick = this.handleToggerClick.bind(this);
+        this.handleButtonClick = this.handleButtonClick.bind(this);
     }
 
     handleToggerClick() {
@@ -39,6 +44,11 @@ class App extends React.Component {
         }
     }
 
+    handleButtonClick(e) {
+        this.setState({
+                selectedConditions: [e.target.value]
+        });
+    }
 
     render() {
         const CommonConditions = [
@@ -357,7 +367,12 @@ class App extends React.Component {
         ]
 
         const commonConditionButtons = CommonConditions.map(cond => {
-            return <ColorButton key={cond.index} value={cond.value}> {cond.display1} </ColorButton>
+            if (this.state.language === 'en') {
+                return <ColorButton key={cond.index} value={cond.value} clickHandler={this.handleButtonClick}> {cond.display} </ColorButton>
+            } else if (this.state.language === 'zh-CN') {
+                return <ColorButton key={cond.index} value={cond.value} clickHandler={this.handleButtonClick}> {cond.display1} </ColorButton>
+            }
+            return null;
         });
 
         return (
@@ -367,6 +382,7 @@ class App extends React.Component {
                 <div>
                     {commonConditionButtons}
                 </div>
+                <h3>{this.state.selectedConditions}</h3>
             </div>
         )
     }
