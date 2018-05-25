@@ -45,8 +45,12 @@ class App extends React.Component {
     }
 
     handleButtonClick(e) {
+        const selectedConditions = [
+            ...this.state.selectedConditions,
+            e.target.value];
+
         this.setState({
-                selectedConditions: [e.target.value]
+                selectedConditions
         });
     }
 
@@ -382,7 +386,7 @@ class App extends React.Component {
                 <div>
                     {commonConditionButtons}
                 </div>
-                <h3>{this.state.selectedConditions}</h3>
+                <h3>{this.state.selectedConditions.join()}</h3>
             </div>
         )
     }
