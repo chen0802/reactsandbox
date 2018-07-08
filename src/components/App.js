@@ -57,7 +57,7 @@ class App extends React.Component {
         });
     }
 
-    render() {
+    renderMulBtns() {
         const CommonConditions = [
             {
                 index: 1,
@@ -420,28 +420,23 @@ class App extends React.Component {
         )
     };
    
-
     renderWelcome() {
         return (
             <Welcome  />
         )
     }
 
-    render1() {
-    
+    render() {
         return (
             <React.Fragment>
                 <WarningBanner warn={this.state.warning} />                 
                 <h2 className='text-left'> Bitcoin Price &#36; &pound; &euro;  <Clock increment="1"/> </h2>
                 <BitcoinPrice />
-
-                <Welcome name = "Add Bitcoin into your portifilo"  />
             </React.Fragment>
         )
     }
 
     renderold() {
-
         return (
             <div>
                 <WarningBanner warn={this.state.warning} />                 
